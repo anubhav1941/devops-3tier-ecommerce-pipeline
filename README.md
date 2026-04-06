@@ -405,7 +405,7 @@ Two application replicas are running (managed by the Deployment), MongoDB is run
 DevOps Engineer (Aspiring)
 
 [![GitHub](https://img.shields.io/badge/GitHub-anubhav1941-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/anubhav1941)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/anubhav-arora)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anubhavarora-devops/)
 
 ---
 
