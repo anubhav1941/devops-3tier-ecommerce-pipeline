@@ -237,25 +237,18 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 > Jenkins pipeline `deployment-day` showing successful Build #7 after debugging earlier runs (#3–#6).
 
-![Jenkins Stage View](screenshots/jenkins-stage-view.png)
+![Jenkins Stage View](screenshots/jenkins/jenkins-stage-view.png)
 
 ### Console Output — Build #7
 
-> Successful Git checkout and clone from GitHub repo.
+> Successful Git checkout, 16-step multi-stage Docker image build, and push to DockerHub.
 
-![Jenkins Console](screenshots/jenkins-console.png)
-
-### Docker Image Build — 16 Steps
-
-> Multi-stage Docker image build using `node:18-alpine`.
-
-![Jenkins Docker Build](screenshots/jenkins-docker-build.png)
+![Jenkins Console](screenshots/jenkins/jenkins-console.png)
+![Jenkins Docker Build](screenshots/jenkins/jenkins-docker-build.png)
 
 ### Pipeline Result — SUCCESS
 
-> Docker image pushed to DockerHub. Pipeline finished with `SUCCESS`.
-
-![Jenkins Success](screenshots/jenkins-success.png)
+![Jenkins Success](screenshots/jenkins/jenkins-success.png)
 
 ---
 
@@ -265,19 +258,19 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 > Application `devops-3tier-ecommerce-pipeline` showing status: **Healthy** and **Synced** to `HEAD (562b6fa)`.
 
-![ArgoCD App Overview](screenshots/argocd-app-overview.png)
+![ArgoCD App Overview](screenshots/argo-cd/argocd-app-overview.png)
 
 ### Application Details Tree — Partial View
 
 > Resource tree showing ConfigMap, Namespace, PV, PVC, Secrets, and Services — all synced 4 hours ago.
 
-![ArgoCD Tree](screenshots/argocd-tree.png)
+![ArgoCD Tree](screenshots/argo-cd/argocd-tree.png)
 
 ### Full Application Tree
 
 > Complete view including Deployments, StatefulSet, HPA, DB Migration Job, ClusterIssuer, and Ingress.
 
-![ArgoCD Full Tree](screenshots/argocd-full-tree.png)
+![ArgoCD Full Tree](screenshots/argo-cd/argocd-full-tree.png)
 
 **All 13 resources synced and healthy:**
 
@@ -303,7 +296,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 > All pods confirmed running in the `easyshop` namespace on AWS EKS.
 
-![Kubernetes Pods](screenshots/kubernetes-pods.png)
+![Kubernetes Pods](screenshots/kubernetes/kubernetes-pods.png)
 
 ```bash
 $ kubectl get pods -n easyshop
@@ -323,33 +316,23 @@ Two application replicas are running (managed by the Deployment), MongoDB is run
 
 ### Homepage — Hero Banner
 
-> Live EasyShop application showing the hero banner with promotional offers.
-
-![Homepage Hero](screenshots/app-homepage-hero.png)
+![Homepage Hero](screenshots/output/app-homepage-hero.png)
 
 ### Homepage — Product Categories
 
-> Homepage displaying Gadgets, Fashion, Beauty, Groceries, Furniture, and Health categories.
-
-![Homepage Categories](screenshots/app-homepage-categories.png)
+![Homepage Categories](screenshots/output/app-homepage-categories.png)
 
 ### Best Sellers — Product Listing
 
-> Best sellers section showing gadgets with pricing and Add to Cart functionality.
-
-![Product Listing](screenshots/app-product-listing.png)
+![Product Listing](screenshots/output/app-product-listing.png)
 
 ### Cart — Add to Cart Flow
 
-> Shopping cart showing added item (Asus ProArt PA329) with checkout flow.
-
-![Cart](screenshots/app-cart.png)
+![Cart](screenshots/output/app-cart.png)
 
 ### Authentication Page
 
-> Login page with email/password and Google OAuth support.
-
-![Login](screenshots/app-login.png)
+![Login](screenshots/output/app-login.png)
 
 ---
 
@@ -409,19 +392,6 @@ Two application replicas are running (managed by the Deployment), MongoDB is run
 │   ├── 09-service.yaml
 │   └── 10-ingress.yaml
 ├── 📁 screenshots/                 # Deployment proof screenshots
-│   ├── jenkins-stage-view.png
-│   ├── jenkins-console.png
-│   ├── jenkins-docker-build.png
-│   ├── jenkins-success.png
-│   ├── argocd-app-overview.png
-│   ├── argocd-tree.png
-│   ├── argocd-full-tree.png
-│   ├── kubernetes-pods.png
-│   ├── app-homepage-hero.png
-│   ├── app-homepage-categories.png
-│   ├── app-product-listing.png
-│   ├── app-cart.png
-│   └── app-login.png
 ├── 📄 Jenkinsfile                  # Declarative CI/CD pipeline definition
 ├── 📄 Dockerfile                   # Multi-stage application container build
 └── 📄 README.md
