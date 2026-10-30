@@ -73,7 +73,7 @@ This project demonstrates a **complete, production-style DevOps workflow** for d
 ┌─────────────────────────┐
 │        ArgoCD           │
 │   (GitOps — on EKS)     │
-│  Auto-syncs K8s manifests│
+│ Auto-syncs K8s manifests│
 └────────────┬────────────┘
              │
              ▼
